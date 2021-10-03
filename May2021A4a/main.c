@@ -9,7 +9,14 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+    // the code rewritten. ...
+    int array_nums[]={0,4,0,0,7,2,0,5};
+    int array_nums_length=sizeof(array_nums)/sizeof(array_nums[0]);
+    int k=0;
+    for(int i=0;i<array_nums_length;i++)
+     if(array_nums[i]!=0)array_nums[k++]=array_nums[i];
+    for(int i=k; i<array_nums_length; i++)
+        array_nums[i]=0;
+    for(int i=0;i<array_nums_length;i++)
+        printf("%d ", array_nums[i]);printf("\n");
 }
